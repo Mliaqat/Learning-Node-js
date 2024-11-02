@@ -6,6 +6,8 @@ const app = express();
 
 const product = require("./routes/addData");
 
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(product);
 
 app.listen(3004, () => {
